@@ -44,6 +44,11 @@ h3 {
   clear: both;
 }
 
+#tweetFeed:hover i {
+  visibility: visible;
+
+}
+
 header .handle {
   font-size: 10px;
   font-weight: normal;
@@ -69,4 +74,18 @@ footer {
   border-top: 1px solid #eee;
   font-size: 10px;
   padding: 5px;
+  height: 30px;
+}
+
+footer span {
+  vertical-align: middle;
+}
+
+footer i{
+  float: right;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  color: lightblue;
 }
