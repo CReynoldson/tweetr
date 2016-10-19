@@ -86,7 +86,47 @@ function renderTweets(tweets){
   }
 }
 
-// var $tweet = createTweetElement(tweetData)
+$("form").on("submit", function (event){
+  event.preventDefault();
+  var newTweetContent = $.ajax({
+    method: "post",
+    url: "/tweets",
+    data: $(this).serialize()
+  });
+  newTweetContent.done(function (data){
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 renderTweets(tweetData);
 
 });
