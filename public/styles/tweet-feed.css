@@ -12,10 +12,10 @@ header {
   background-color: #eee;
   width: auto;
   height: 60px;
-/*  padding: 10px;
-*/}
+  border-radius: 10px;
+}
 
-.avatar {
+header .avatar {
   height: 50px;
   width: 50px;
   border-radius: 2px;
@@ -31,42 +31,46 @@ h3 {
 }
 
 
-#tweetFeed {
+ .tweet {
   border: 1px solid #eee;
+  border-radius: 10px;
   background-color: white;
-  margin: 1em 2em;
+  margin: 1em auto;
 }
 
+#tweetFeed {
+  background-color: white;
+}
 
-.avatar:after{
+header .avatar:after{
   content: "";
   display: block;
   clear: both;
 }
 
-#tweetFeed:hover i {
+#tweetFeed .tweet:hover i {
   visibility: visible;
 
 }
 
-header .handle {
+ .handle {
   font-size: 10px;
   font-weight: normal;
   float: right;
 
 }
 
-.superDiv{
+ .headerTextPadding{
   padding: 15px;
 }
 
-.handle:after {
+ .handle:after {
   content: "";
   display: block;
   clear: both;
 }
 
-.tweet {
+ .tweetContent {
   padding: 5px;
 }
 
@@ -87,5 +91,5 @@ footer i{
   height: 10px;
   width: 10px;
   margin: 5px;
-  color: lightblue;
+  color: #00a087;
 }
