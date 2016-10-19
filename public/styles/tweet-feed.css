@@ -1,0 +1,72 @@
+/* <section>
+        <article class="tweetFeed">
+          <header> Bill Fields </header>
+          <p>Here is a bunch of text inside an article that is supposed to be my tweet!</p>
+          <footer>10 days ago</footer>
+        </article>
+      </section>*/
+
+/*section*/
+
+header {
+  background-color: #eee;
+  width: auto;
+  height: 60px;
+/*  padding: 10px;
+*/}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 2px;
+  margin: 5px;
+  float: left;
+}
+
+h3 {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 18px;
+  float: left;
+}
+
+
+#tweetFeed {
+  border: 1px solid #eee;
+  background-color: white;
+  margin: 1em 2em;
+}
+
+
+.avatar:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .handle {
+  font-size: 10px;
+  font-weight: normal;
+  float: right;
+
+}
+
+.superDiv{
+  padding: 15px;
+}
+
+.handle:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.tweet {
+  padding: 5px;
+}
+
+footer {
+  border-top: 1px solid #eee;
+  font-size: 10px;
+  padding: 5px;
+}
