@@ -1,13 +1,6 @@
-/* <section>
-        <article class="tweetFeed">
-          <header> Bill Fields </header>
-          <p>Here is a bunch of text inside an article that is supposed to be my tweet!</p>
-          <footer>10 days ago</footer>
-        </article>
-      </section>*/
 
-/*section*/
 
+/*Tweet top structure - avatar, name, handle*/
 header {
   background-color: #eee;
   width: auto;
@@ -30,16 +23,12 @@ h3 {
   float: left;
 }
 
-
+/*Formatting individual tweet boxes*/
  .tweet {
   border: 1px solid #eee;
   border-radius: 10px;
   background-color: white;
-  margin: 1em auto;
-}
-
-#tweetFeed {
-  background-color: white;
+  margin: 1em 2em;
 }
 
 header .avatar:after{
