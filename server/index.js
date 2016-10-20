@@ -16,9 +16,6 @@ db.connect((dbInstance) => {
 });
 
   app.post("/", function(req, res) {
-        console.log(req.body);
-    console.log(req.body.text);
-    console.log("in index.js");
     if (!req.body.text) {
       res.status(400);
       return res.send("{'error': 'invalid request'}\n");
