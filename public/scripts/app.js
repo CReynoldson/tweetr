@@ -88,13 +88,19 @@ function renderTweets(tweets){
 
 $("form").on("submit", function (event){
   event.preventDefault();
-  var newTweetContent = $.ajax({
-    method: "post",
-    url: "/tweets",
-    data: $(this).serialize()
-  });
-  newTweetContent.done(function (data){
-  });
+  var text = $("textarea").val().length;
+  console.log(text);
+  if (!text){
+    $.flash("You didn't enter anything!");
+  } else if (text > 140){
+    $.flash("Check the counter -- that's way too long. Can you even read?");
+  } else {
+    var newTweetContent = $.ajax({
+      method: "post",
+      url: "/tweets",
+      data: $(this).serialize()
+    });
+  }
 });
 
 function loadTweets(){
@@ -106,7 +112,7 @@ function loadTweets(){
   });
 
   getTweets.done(function(data){
-    console.log("DONE, BITCHEZZZ");
+    console.log("DONE");
     renderTweets(data);
   })
 
@@ -143,6 +149,5 @@ loadTweets();
 
 
 
-renderTweets(tweetData);
 
 });
