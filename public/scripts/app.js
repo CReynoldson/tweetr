@@ -75,49 +75,13 @@ $("form").on("submit", function (event){
   }
 });
 
-$("#nav-bar").find(".buttons").on("click", function (){
-  console.log("HE TOUCHED THE BUTT 0_0");
-  $(".new-tweet").slideToggle();
-  $("textarea").select();
+$("#compose-button").on("click", function (){
+  $("#new-tweet").slideToggle();
+  $("#new-tweet textarea").focus();
 })
 
 
-
-
-
-
-
-
-
-
 loadTweets(true);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 });

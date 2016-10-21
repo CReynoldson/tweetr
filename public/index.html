@@ -35,13 +35,14 @@
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
       <div>
-        <span class="buttons" attr="compose"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Compose</span>
+        <span id="compose-button" class="buttons" attr="compose"><i class="fa fa-pencil-square-o"
+        aria-hidden="true"></i> Compose</span>
       </div>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section id="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
