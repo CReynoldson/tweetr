@@ -32,7 +32,6 @@ function createTweetElement(tweetData){
 }
 
 function renderTweets(tweets){
-  console.log("Got to renderTweets with " + tweets);
   var currentTweet;
   for (var i = 0; i < tweets.length; i++){
     currentTweet = createTweetElement(tweets[i]);
