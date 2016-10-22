@@ -32,6 +32,7 @@ function createTweetElement(tweetData){
 }
 
 function renderTweets(tweets){
+  console.log("Got to renderTweets with " + tweets);
   var currentTweet;
   for (var i = 0; i < tweets.length; i++){
     currentTweet = createTweetElement(tweets[i]);
@@ -51,8 +52,9 @@ function loadTweets(loadAllTweets){
     if (loadAllTweets === true){
       renderTweets(data);
     } else if (loadAllTweets === false) {
-      let singleTweet = [data[data.length - 1]];
-      renderTweets(singleTweet);
+      $("#tweetFeed").prepend(createTweetElement(data[data.length - 1]));
+      // let singleTweet = [data[data.length - 1]];
+      // renderTweets(singleTweet);
     }
   });
 }
@@ -69,9 +71,11 @@ $("form").on("submit", function (event){
     $.ajax({
       method: "post",
       url: "/tweets",
-      data: $(this).serialize()
+      data: $(this).serialize(),
+      dataType: 'json'
     });
     loadTweets(false);
+    $("#text").val("");
   }
 });
 

@@ -8,15 +8,12 @@ module.exports = function(db) {
 
   tweets.get("/", function(req, res) {
 
-    let tweets = db.getTweets();
-    // simulate delay
-    setTimeout(() => {
-      return res.json(tweets);
-    }, 300);
+    let tweets = db.getTweets((myTweets) => {
+      return res.json(myTweets);
+    });
   });
 
   tweets.post("/", function(req, res) {
-        console.log(req.body);
     if (!req.body.text) {
       res.status(400);
       return res.send("{'error': 'invalid request'}\n");
@@ -32,10 +29,6 @@ module.exports = function(db) {
     };
     db.saveTweet(tweet);
     return res.send();
-  });
-
-  tweets.post("/tweets/", function(req, res){
-    console.log("hello tweets");
   });
 
   return tweets;
