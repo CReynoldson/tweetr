@@ -50,10 +50,8 @@ function loadTweets(loadAllTweets){
 
     if (loadAllTweets === true){
       renderTweets(data);
-    } else if (loadAllTweets === false) {
+    } else {
       $("#tweetFeed").prepend(createTweetElement(data[data.length - 1]));
-      // let singleTweet = [data[data.length - 1]];
-      // renderTweets(singleTweet);
     }
   });
 }
@@ -61,7 +59,8 @@ function loadTweets(loadAllTweets){
 $("form").on("submit", function (event){
   event.preventDefault();
 
-  var text = $("textarea").val().length;
+  var text = $("#text").val();
+  text = text.trim();
   if (!text){
     $.flash("You didn't enter anything!");
   } else if (text > 140){

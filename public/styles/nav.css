@@ -39,4 +39,5 @@ nav {
 #nav-bar .buttons:hover {
   background-color: white;
   color: black;
+  cursor: pointer;
 }
