@@ -63,7 +63,7 @@ $("form").on("submit", function (event){
   text = text.trim();
   if (!text){
     $.flash("You didn't enter anything!");
-  } else if (text > 140){
+  } else if (text.length > 140){
     $.flash("Check the counter -- that's way too long. So embarrassing.");
   } else {
     $.ajax({

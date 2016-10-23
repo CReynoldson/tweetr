@@ -5,7 +5,7 @@
 
 $(document).ready(function (){
 
-  var tweetArea = $('.new-tweet').find('textarea');
+  var tweetArea = $('#new-tweet').find('textarea');
 
   $(tweetArea).on('input', function (){
     var text = $(this).val().length;

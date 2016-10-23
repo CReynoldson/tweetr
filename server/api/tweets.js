@@ -9,6 +9,7 @@ module.exports = function(db) {
   tweets.get("/", function(req, res) {
 
     let tweets = db.getTweets((myTweets) => {
+      console.log(myTweets);
       return res.json(myTweets);
     });
   });
